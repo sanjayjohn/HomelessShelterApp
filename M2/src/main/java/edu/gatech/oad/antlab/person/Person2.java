@@ -1,5 +1,7 @@
 package edu.gatech.oad.antlab.person;
 
+import java.util.*;
+
 /**
  *  A simple class for person 2
  *  returns their name and a
@@ -34,11 +36,11 @@ public class Person2 {
 	  List<String> letters = Arrays.asList(input);
 	  Collections.shuffle(letters);
 	  String shuffled = "";
-	  for (letter:letters) {
+	  for (String letter : letters) {
 	  	shuffled += letter;
 	  }
 
-	  return shuffled
+	  return shuffled;
 	}
 	/**
 	 * Return a string rep of this object
