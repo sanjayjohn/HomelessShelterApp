@@ -32,12 +32,23 @@ class SignInViewController: UIViewController {
         {
             return
         }
-        if (username == "test@test.com") && (password == "password")
+        if (username == "username@test.com") && (password == "password")
         {
             let SignedInPage = self.storyboard?.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
         
             self.present(SignedInPage, animated: true)
         }
+    }
+    
+    @IBAction func CancelButton(_ sender: Any) {
+        let WelcomePage = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+        
+        self.present(WelcomePage, animated: true)
+    }
+    @IBAction func RegisterButton(_ sender: Any) {
+        let RegisterPageAlso = self.storyboard?.instantiateViewController(withIdentifier: "RegisterPageViewController") as! RegisterPageViewController
+        
+        self.present(RegisterPageAlso, animated: true)
     }
     
     /*

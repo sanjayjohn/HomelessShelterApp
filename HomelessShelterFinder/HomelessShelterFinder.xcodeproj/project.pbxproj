@@ -15,6 +15,8 @@
 		061A0C63203280A5008A832B /* HomelessShelterFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A0C62203280A5008A832B /* HomelessShelterFinderTests.swift */; };
 		061A0C6E203284D2008A832B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A0C6D203284D2008A832B /* SignInViewController.swift */; };
 		061A0C7020328627008A832B /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A0C6F20328627008A832B /* HomePageViewController.swift */; };
+		06620B4520336B2400931238 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06620B4420336B2400931238 /* WelcomeViewController.swift */; };
+		06620B47203371D000931238 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06620B46203371D000931238 /* RegisterPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		061A0C64203280A5008A832B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		061A0C6D203284D2008A832B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		061A0C6F20328627008A832B /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		06620B4420336B2400931238 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		06620B46203371D000931238 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				061A0C59203280A5008A832B /* Info.plist */,
 				061A0C6D203284D2008A832B /* SignInViewController.swift */,
 				061A0C6F20328627008A832B /* HomePageViewController.swift */,
+				06620B4420336B2400931238 /* WelcomeViewController.swift */,
+				06620B46203371D000931238 /* RegisterPageViewController.swift */,
 			);
 			path = HomelessShelterFinder;
 			sourceTree = "<group>";
@@ -206,6 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				061A0C7020328627008A832B /* HomePageViewController.swift in Sources */,
+				06620B4520336B2400931238 /* WelcomeViewController.swift in Sources */,
+				06620B47203371D000931238 /* RegisterPageViewController.swift in Sources */,
 				061A0C50203280A5008A832B /* ViewController.swift in Sources */,
 				061A0C4E203280A5008A832B /* AppDelegate.swift in Sources */,
 				061A0C6E203284D2008A832B /* SignInViewController.swift in Sources */,
