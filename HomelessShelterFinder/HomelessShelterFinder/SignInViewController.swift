@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
 
@@ -25,18 +27,41 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func SignInButton(_ sender: Any) {
-        let username = _username.text
-        let password = _password.text
-        
-        if (username?.isEmpty)! || (password?.isEmpty)!
-        {
-            return
-        }
-        if (username == "username@test.com") && (password == "password")
-        {
-            let SignedInPage = self.storyboard?.instantiateViewController(withIdentifier: "HomePageViewController") as! HomePageViewController
-        
-            self.present(SignedInPage, animated: true)
+        if self._username.text == "" || self._password.text == "" {
+            
+            //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
+            
+            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+        } else {
+            
+            Auth.auth().signIn(withEmail: self._username.text!, password: self._password.text!) { (user, error) in
+                
+                if error == nil {
+                    
+                    //Print into the console if successfully logged in
+                    print("You have successfully logged in")
+                    
+                    //Go to the HomeViewController if the login is sucessful
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomePageViewController")
+                    self.present(vc!, animated: true, completion: nil)
+                    
+                } else {
+                    
+                    //Tells the user that there is an error and then gets firebase to tell them the error
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
         }
     }
     
@@ -50,7 +75,11 @@ class SignInViewController: UIViewController {
         
         self.present(RegisterPageAlso, animated: true)
     }
-    
+    @IBAction func ResetPasswordButton(_ sender: Any) {
+        let ResetPass = self.storyboard?.instantiateViewController(withIdentifier: "ResetPasswordViewController") as! ResetPasswordViewController
+        
+        self.present(ResetPass, animated: true)
+    }
     /*
     // MARK: - Navigation
 

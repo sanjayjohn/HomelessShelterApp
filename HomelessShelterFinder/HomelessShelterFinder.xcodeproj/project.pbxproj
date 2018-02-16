@@ -17,6 +17,10 @@
 		061A0C7020328627008A832B /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A0C6F20328627008A832B /* HomePageViewController.swift */; };
 		06620B4520336B2400931238 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06620B4420336B2400931238 /* WelcomeViewController.swift */; };
 		06620B47203371D000931238 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06620B46203371D000931238 /* RegisterPageViewController.swift */; };
+		06DD9F52203694E1001486E1 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD9F51203694E1001486E1 /* ResetPasswordViewController.swift */; };
+		06DD9F54203698B2001486E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06DD9F53203698B2001486E1 /* GoogleService-Info.plist */; };
+		7CFB1416409A4708F8CFB46C /* Pods_HomelessShelterFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 331302517FF5E3B6B5BC1745 /* Pods_HomelessShelterFinder.framework */; };
+		997360FD2491D05E49CF9472 /* Pods_HomelessShelterFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C8F64234D86390DEB0CA04 /* Pods_HomelessShelterFinderTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,14 @@
 		061A0C6F20328627008A832B /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		06620B4420336B2400931238 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		06620B46203371D000931238 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		06DD9F51203694E1001486E1 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		06DD9F53203698B2001486E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		331302517FF5E3B6B5BC1745 /* Pods_HomelessShelterFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomelessShelterFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C8F64234D86390DEB0CA04 /* Pods_HomelessShelterFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomelessShelterFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF972DE04A269E99DCDC23A5 /* Pods-HomelessShelterFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomelessShelterFinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomelessShelterFinderTests/Pods-HomelessShelterFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D94603976FF805EB5F512100 /* Pods-HomelessShelterFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomelessShelterFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomelessShelterFinder/Pods-HomelessShelterFinder.release.xcconfig"; sourceTree = "<group>"; };
+		DB8901EB7535BA52B9E887EE /* Pods-HomelessShelterFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomelessShelterFinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomelessShelterFinder/Pods-HomelessShelterFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		E541AA6A9D41D762D0D799A6 /* Pods-HomelessShelterFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomelessShelterFinderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HomelessShelterFinderTests/Pods-HomelessShelterFinderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CFB1416409A4708F8CFB46C /* Pods_HomelessShelterFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				997360FD2491D05E49CF9472 /* Pods_HomelessShelterFinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,8 @@
 				061A0C4C203280A5008A832B /* HomelessShelterFinder */,
 				061A0C61203280A5008A832B /* HomelessShelterFinderTests */,
 				061A0C4B203280A5008A832B /* Products */,
+				F40B3305A895850B62E027EC /* Pods */,
+				7E065B703B050FA5253D855A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +111,8 @@
 				061A0C6F20328627008A832B /* HomePageViewController.swift */,
 				06620B4420336B2400931238 /* WelcomeViewController.swift */,
 				06620B46203371D000931238 /* RegisterPageViewController.swift */,
+				06DD9F51203694E1001486E1 /* ResetPasswordViewController.swift */,
+				06DD9F53203698B2001486E1 /* GoogleService-Info.plist */,
 			);
 			path = HomelessShelterFinder;
 			sourceTree = "<group>";
@@ -108,6 +126,26 @@
 			path = HomelessShelterFinderTests;
 			sourceTree = "<group>";
 		};
+		7E065B703B050FA5253D855A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				331302517FF5E3B6B5BC1745 /* Pods_HomelessShelterFinder.framework */,
+				A1C8F64234D86390DEB0CA04 /* Pods_HomelessShelterFinderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F40B3305A895850B62E027EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB8901EB7535BA52B9E887EE /* Pods-HomelessShelterFinder.debug.xcconfig */,
+				D94603976FF805EB5F512100 /* Pods-HomelessShelterFinder.release.xcconfig */,
+				CF972DE04A269E99DCDC23A5 /* Pods-HomelessShelterFinderTests.debug.xcconfig */,
+				E541AA6A9D41D762D0D799A6 /* Pods-HomelessShelterFinderTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 061A0C67203280A5008A832B /* Build configuration list for PBXNativeTarget "HomelessShelterFinder" */;
 			buildPhases = (
+				58A2F002C882987626EA2411 /* [CP] Check Pods Manifest.lock */,
 				061A0C46203280A5008A832B /* Sources */,
 				061A0C47203280A5008A832B /* Frameworks */,
 				061A0C48203280A5008A832B /* Resources */,
+				D409C637A1E2B27D79FCA108 /* [CP] Embed Pods Frameworks */,
+				AB98B4BE7D98410338FA61B0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 061A0C6A203280A5008A832B /* Build configuration list for PBXNativeTarget "HomelessShelterFinderTests" */;
 			buildPhases = (
+				A3CD5700D33E408D75E6D72A /* [CP] Check Pods Manifest.lock */,
 				061A0C5A203280A5008A832B /* Sources */,
 				061A0C5B203280A5008A832B /* Frameworks */,
 				061A0C5C203280A5008A832B /* Resources */,
+				0260CABBDF0BD0CFABD78376 /* [CP] Embed Pods Frameworks */,
+				306260D63F409F66137C07B8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				061A0C58203280A5008A832B /* LaunchScreen.storyboard in Resources */,
+				06DD9F54203698B2001486E1 /* GoogleService-Info.plist in Resources */,
 				061A0C55203280A5008A832B /* Assets.xcassets in Resources */,
 				061A0C53203280A5008A832B /* Main.storyboard in Resources */,
 			);
@@ -206,6 +251,112 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0260CABBDF0BD0CFABD78376 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomelessShelterFinderTests/Pods-HomelessShelterFinderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		306260D63F409F66137C07B8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomelessShelterFinderTests/Pods-HomelessShelterFinderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58A2F002C882987626EA2411 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HomelessShelterFinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3CD5700D33E408D75E6D72A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HomelessShelterFinderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB98B4BE7D98410338FA61B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomelessShelterFinder/Pods-HomelessShelterFinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D409C637A1E2B27D79FCA108 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HomelessShelterFinder/Pods-HomelessShelterFinder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HomelessShelterFinder/Pods-HomelessShelterFinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		061A0C46203280A5008A832B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -217,6 +368,7 @@
 				061A0C50203280A5008A832B /* ViewController.swift in Sources */,
 				061A0C4E203280A5008A832B /* AppDelegate.swift in Sources */,
 				061A0C6E203284D2008A832B /* SignInViewController.swift in Sources */,
+				06DD9F52203694E1001486E1 /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +519,7 @@
 		};
 		061A0C68203280A5008A832B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB8901EB7535BA52B9E887EE /* Pods-HomelessShelterFinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -381,6 +534,7 @@
 		};
 		061A0C69203280A5008A832B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D94603976FF805EB5F512100 /* Pods-HomelessShelterFinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -395,6 +549,7 @@
 		};
 		061A0C6B203280A5008A832B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF972DE04A269E99DCDC23A5 /* Pods-HomelessShelterFinderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -411,6 +566,7 @@
 		};
 		061A0C6C203280A5008A832B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E541AA6A9D41D762D0D799A6 /* Pods-HomelessShelterFinderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
