@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "218525561932",
+    "firebase_url": "https://m2firebaseproject-971cc.firebaseio.com",
+    "project_id": "m2firebaseproject-971cc",
+    "storage_bucket": "m2firebaseproject-971cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218525561932:android:64b36d94e7012b7c",
+        "android_client_info": {
+          "package_name": "com.example.rob.shelterfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "218525561932-72hh57n1b81fft1r6ft5qkuvq1ir4kvk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rob.shelterfinder",
+            "certificate_hash": "25fb6d2d8abebc1860c11722f8115c75045eeb1c"
+          }
+        },
+        {
+          "client_id": "218525561932-pq393sv4et6o8t04a4rd7k8cfvn1ju9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLlKN6qJJHTdar02moI5nd3PuSz9hARfk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "218525561932-pq393sv4et6o8t04a4rd7k8cfvn1ju9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
