@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0618356B203BF7B300096DE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0618356A203BF7B300096DE3 /* GoogleService-Info.plist */; };
 		061A0C4E203280A5008A832B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A0C4D203280A5008A832B /* AppDelegate.swift */; };
 		061A0C50203280A5008A832B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061A0C4F203280A5008A832B /* ViewController.swift */; };
 		061A0C53203280A5008A832B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 061A0C51203280A5008A832B /* Main.storyboard */; };
@@ -18,7 +19,6 @@
 		06620B4520336B2400931238 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06620B4420336B2400931238 /* WelcomeViewController.swift */; };
 		06620B47203371D000931238 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06620B46203371D000931238 /* RegisterPageViewController.swift */; };
 		06DD9F52203694E1001486E1 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD9F51203694E1001486E1 /* ResetPasswordViewController.swift */; };
-		06DD9F54203698B2001486E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06DD9F53203698B2001486E1 /* GoogleService-Info.plist */; };
 		7CFB1416409A4708F8CFB46C /* Pods_HomelessShelterFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 331302517FF5E3B6B5BC1745 /* Pods_HomelessShelterFinder.framework */; };
 		997360FD2491D05E49CF9472 /* Pods_HomelessShelterFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C8F64234D86390DEB0CA04 /* Pods_HomelessShelterFinderTests.framework */; };
 /* End PBXBuildFile section */
@@ -34,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06183568203BF64800096DE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		06183569203BF64A00096DE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0618356A203BF7B300096DE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		061A0C4A203280A5008A832B /* HomelessShelterFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomelessShelterFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		061A0C4D203280A5008A832B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		061A0C4F203280A5008A832B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +52,6 @@
 		06620B4420336B2400931238 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		06620B46203371D000931238 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		06DD9F51203694E1001486E1 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
-		06DD9F53203698B2001486E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		331302517FF5E3B6B5BC1745 /* Pods_HomelessShelterFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomelessShelterFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C8F64234D86390DEB0CA04 /* Pods_HomelessShelterFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomelessShelterFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF972DE04A269E99DCDC23A5 /* Pods-HomelessShelterFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomelessShelterFinderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HomelessShelterFinderTests/Pods-HomelessShelterFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,9 +83,9 @@
 		061A0C41203280A5008A832B = {
 			isa = PBXGroup;
 			children = (
+				0618356A203BF7B300096DE3 /* GoogleService-Info.plist */,
 				061A0C4C203280A5008A832B /* HomelessShelterFinder */,
 				061A0C61203280A5008A832B /* HomelessShelterFinderTests */,
-				061A0C4B203280A5008A832B /* Products */,
 				F40B3305A895850B62E027EC /* Pods */,
 				7E065B703B050FA5253D855A /* Frameworks */,
 			);
@@ -96,6 +98,7 @@
 				061A0C5E203280A5008A832B /* HomelessShelterFinderTests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		061A0C4C203280A5008A832B /* HomelessShelterFinder */ = {
@@ -112,7 +115,7 @@
 				06620B4420336B2400931238 /* WelcomeViewController.swift */,
 				06620B46203371D000931238 /* RegisterPageViewController.swift */,
 				06DD9F51203694E1001486E1 /* ResetPasswordViewController.swift */,
-				06DD9F53203698B2001486E1 /* GoogleService-Info.plist */,
+				061A0C4B203280A5008A832B /* Products */,
 			);
 			path = HomelessShelterFinder;
 			sourceTree = "<group>";
@@ -129,6 +132,8 @@
 		7E065B703B050FA5253D855A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06183568203BF64800096DE3 /* GoogleService-Info.plist */,
+				06183569203BF64A00096DE3 /* GoogleService-Info.plist */,
 				331302517FF5E3B6B5BC1745 /* Pods_HomelessShelterFinder.framework */,
 				A1C8F64234D86390DEB0CA04 /* Pods_HomelessShelterFinderTests.framework */,
 			);
@@ -236,7 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				061A0C58203280A5008A832B /* LaunchScreen.storyboard in Resources */,
-				06DD9F54203698B2001486E1 /* GoogleService-Info.plist in Resources */,
+				0618356B203BF7B300096DE3 /* GoogleService-Info.plist in Resources */,
 				061A0C55203280A5008A832B /* Assets.xcassets in Resources */,
 				061A0C53203280A5008A832B /* Main.storyboard in Resources */,
 			);

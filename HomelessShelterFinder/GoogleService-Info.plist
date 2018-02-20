@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>11452244420-urerb359t1v4ff9l0khs9brdff4mvsk3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.11452244420-urerb359t1v4ff9l0khs9brdff4mvsk3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDCh9YF4FHyRspFjHN0MUnHpkrIPKcSZkg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>11452244420</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.SanjayJohn.HomelessShelterFinder</string>
+	<key>PROJECT_ID</key>
+	<string>homelessshelterdatabase</string>
+	<key>STORAGE_BUCKET</key>
+	<string>homelessshelterdatabase.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:11452244420:ios:39e4f1cb8e3b19ad</string>
+	<key>DATABASE_URL</key>
+	<string>https://homelessshelterdatabase.firebaseio.com</string>
+</dict>
+</plist>
