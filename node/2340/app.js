@@ -28,6 +28,11 @@ app.get('/', function(req, res){
 	res.render('index');
 });
 
+app.post("/login", function(req, res) {
+    console.log("Login!");
+    console.log(req.body);
+});
+
 app.listen(3000, function(){
 	console.log('Hello World');
 })
