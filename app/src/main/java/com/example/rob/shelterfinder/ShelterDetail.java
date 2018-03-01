@@ -1,5 +1,6 @@
 package com.example.rob.shelterfinder;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -7,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,7 +21,7 @@ import android.util.Log;
 import java.util.ArrayList;
 
 public class ShelterDetail extends AppCompatActivity {
-    private ArrayList<ShelterData> array;
+    private ArrayList<String> array;
     DatabaseReference mRef;
     ListView listview2;
     ArrayList<String> list = new ArrayList<>();
@@ -40,6 +42,14 @@ public class ShelterDetail extends AppCompatActivity {
             }
         });
 
+        Button backButton = (Button) findViewById(R.id.button3);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goBack();
+            }
+        });
+
         mRef = FirebaseDatabase.getInstance().getReference();
         array = new ArrayList<>();
         final ListView listView2 = (ListView) findViewById(R.id.listView2);
@@ -52,13 +62,18 @@ public class ShelterDetail extends AppCompatActivity {
                 for (DataSnapshot child : children) {
                     ShelterData value = child.getValue(ShelterData.class);
                     if (value.getUniqueKey().equals(Integer.toString(AppActivity.positionList))) {
-                        array.add(value);
-                        Log.w("Item", ""+ value);
-                        Log.w("Item", ""+ AppActivity.positionList);
+                        array.add("Shelter name:" + "    " + value.getShelterName());
+                        array.add("Address:" + "    " + value.getAddress());
+                        array.add("Capacity:" + "    " +  value.getCapacity());
+                        array.add("Latitude:" + "    " + value.getLatitude());
+                        array.add("Longitude:" +  "    " + value.getLongitude());
+                        array.add("Gender:" + "    " +  value.getRestrictions());
+                        Log.w("Item", ""+ value.getAddress());
+//                        Log.w("Item", ""+ AppActivity.positionList);
                     }
 //                    Log.w("Item", ""+ newValue);
                 }
-                ArrayAdapter<ShelterData> adapter = new ArrayAdapter<ShelterData>(getApplicationContext(),
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),
                         android.R.layout.simple_list_item_1, array);
 
                 listView2.setAdapter(adapter);
@@ -70,6 +85,11 @@ public class ShelterDetail extends AppCompatActivity {
                 System.out.println("The read failed: " + databaseError.getCode());
             }
         });
+    }
+
+    public void goBack() {
+        Intent intent = new Intent(this, AppActivity.class);
+        startActivity(intent);
     }
 
 }
