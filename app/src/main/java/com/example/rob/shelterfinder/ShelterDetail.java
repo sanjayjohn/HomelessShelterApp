@@ -3,12 +3,11 @@ package com.example.rob.shelterfinder;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -16,7 +15,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -37,16 +35,8 @@ public class ShelterDetail extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        Button backButton = (Button) findViewById(R.id.button3);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goBack();
+                Intent i = new Intent(getApplicationContext(), AppActivity.class);
+                startActivity(i);
             }
         });
 
@@ -88,8 +78,10 @@ public class ShelterDetail extends AppCompatActivity {
     }
 
     public void goBack() {
-        Intent intent = new Intent(this, AppActivity.class);
-        startActivity(intent);
+        Intent i = new Intent(this, AppActivity.class);
+        startActivity(i);
     }
+
+
 
 }
