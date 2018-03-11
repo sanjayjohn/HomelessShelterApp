@@ -51,7 +51,7 @@ public class ShelterDetail extends AppCompatActivity {
                 Iterable<DataSnapshot> children = dataSnapshot.getChildren();
                 for (DataSnapshot child : children) {
                     ShelterData value = child.getValue(ShelterData.class);
-                    if (value.getUniqueKey().equals(Integer.toString(AppActivity.positionList))) {
+                    if (value.getShelterName().equals(AppActivity.theName)) {
                         array.add("Shelter name:" + "    " + value.getShelterName());
                         array.add("Address:" + "    " + value.getAddress());
                         array.add("Capacity:" + "    " +  value.getCapacity());

@@ -10,11 +10,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.app.SearchManager;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
+import android.widget.TextView;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -48,7 +51,7 @@ public class AppActivity extends AppCompatActivity {
     DatabaseReference mRef;
     ListView listview1;
     ArrayList<String> list = new ArrayList<>();
-    public static int positionList;
+    public static String theName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,14 @@ public class AppActivity extends AppCompatActivity {
         setContentView(R.layout.activity_app);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Button signAccount = (Button) findViewById(R.id.logout);
+        signAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                logout(view);
+            }
+        });
 
         mRef = FirebaseDatabase.getInstance().getReference();
         array = new ArrayList<>();
@@ -163,7 +174,7 @@ public class AppActivity extends AppCompatActivity {
         listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                positionList = position;
+                theName = parent.getItemAtPosition(position).toString().trim();
                 Intent nextActivity = new Intent(getApplicationContext(), ShelterDetail.class);
                 startActivity(nextActivity);
             }
