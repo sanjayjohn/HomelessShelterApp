@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -30,6 +31,14 @@ public class ShelterDetail extends AppCompatActivity {
         setContentView(R.layout.activity_shelter_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Button signAccount = (Button) findViewById(R.id.reserve);
+        signAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reserve(view);
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +89,11 @@ public class ShelterDetail extends AppCompatActivity {
     public void goBack() {
         Intent i = new Intent(this, AppActivity.class);
         startActivity(i);
+    }
+
+    public void reserve(View view) {
+        Intent intent = new Intent(this, ReserveRoom.class);
+        startActivity(intent);
     }
 
 

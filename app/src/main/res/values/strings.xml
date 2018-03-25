@@ -4,4 +4,6 @@
     <string name="title_activity_app">AppActivity</string>
     <string name="title_activity_shelter_detail">ShelterDetail</string>
     <string name="back">Back</string>
+    <string name="reserve_room">Reserve Room</string>
+    <string name="title_activity_reserve_room">ReserveRoom</string>
 </resources>

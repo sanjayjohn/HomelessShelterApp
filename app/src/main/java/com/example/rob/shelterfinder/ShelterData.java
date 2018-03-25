@@ -16,12 +16,13 @@ public class ShelterData {
     private String phone;
     private String Address;
     private String specialNotes;
+    private String Max;
 
     public ShelterData() {
 
     }
 
-    public ShelterData(String address, String capacity, String latitude, String longitude, String phone, String restrictions, String shelterName, String specialNotes, String uniqueKey) {
+    public ShelterData(String address, String capacity, String latitude, String longitude, String phone, String restrictions, String shelterName, String specialNotes, String uniqueKey, String max) {
         this.uniqueKey = uniqueKey;
         this.shelterName = shelterName;
         this.Capacity = capacity;
@@ -31,6 +32,7 @@ public class ShelterData {
         this.phone = phone;
         this.Address = address;
         this.specialNotes = specialNotes;
+        this.Max = max;
     }
 
     public String getUniqueKey() {
@@ -69,6 +71,8 @@ public class ShelterData {
         return specialNotes;
     }
 
+    public String getMax() { return Max; }
+
     public void setUniqueKey(String k) {
         this.uniqueKey = k;
     }
@@ -105,8 +109,18 @@ public class ShelterData {
         this.specialNotes = n;
     }
 
+    public void setMax(String n) {this.Max = n; }
+
     public String toString() {
         return shelterName;
+    }
+
+    public int toInt() {
+        return Integer.parseInt(Capacity);
+    }
+
+    public int toMax() {
+        return Integer.parseInt(Max);
     }
 
 

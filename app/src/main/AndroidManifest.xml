@@ -28,6 +28,10 @@
         <activity
             android:name=".ShelterDetail"
             android:label="@string/title_activity_shelter_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ReserveRoom"
+            android:label="@string/title_activity_reserve_room"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

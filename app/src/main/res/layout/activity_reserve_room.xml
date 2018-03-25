@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rob.shelterfinder.ShelterDetail">
+    tools:context="com.example.rob.shelterfinder.ReserveRoom">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -20,20 +20,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <ListView
-        android:id="@+id/listView2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="90dp" />
-
-    <Button
-        android:id="@+id/reserve"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="reserve"
-        android:text="@string/reserve_room"
-        android:visibility="visible"
-        android:layout_marginTop="55dp" />
+    <include layout="@layout/content_reserve_room" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -42,6 +29,5 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
-
 
 </android.support.design.widget.CoordinatorLayout>
