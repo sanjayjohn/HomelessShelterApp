@@ -1,9 +1,24 @@
 <h1>Search Shelters</h1>
 
-<form action="/shelters/search/results" method="POST">
-	<label>Search by gender</label>
+<form action="/shelters/search" method="POST">
+	<label>Search by name</label><br>
+	<input type="text" name="name">
+	<button type="submit">Search</button>
+</form>
+
+<form action="/shelters/search" method="POST">
+	<label>Search by gender</label><br>
 	<input type="radio" name="gender" value="male"> Male<br>
 	<input type="radio" name="gender" value="female"> Female<br>
-	<input type="radio" name="gender" value="unspecified"> Unspecified
+	<input type="radio" name="gender" value="unspecified"> Unspecified<br>
+	<button type="submit">Search</button>
+</form>
+
+<form action="/shelters/search" method="POST">
+	<label>Search by age range</label><br>
+	<input type="radio" name="ageRange" value="families"> Families<br>
+	<input type="radio" name="ageRange" value="children"> Children<br>
+	<input type="radio" name="ageRange" value="youngAdults"> Young Adults<br>
+	<input type="radio" name="ageRange" value="anyone"> Anyone<br>
 	<button type="submit">Search</button>
 </form>

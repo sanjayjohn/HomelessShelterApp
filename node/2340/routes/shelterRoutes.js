@@ -1,5 +1,6 @@
 const FbApp = require("../services/firebase");
 const requireLogin = require("./middleware/requireLogin");
+const searchShelters = require("../services/searchShelters");
 
 module.exports = app => {
 	app.get("/shelters", requireLogin, (req, res) => {
@@ -24,39 +25,17 @@ module.exports = app => {
 		});
 	});
 
-	app.post("/shelters/search/results", requireLogin, (req, res) => {
+	app.post("/shelters/search", requireLogin, (req, res) => {
 		let gender = req.body.gender;
+		let ageRange = req.body.ageRange;
+		let name = req.body.name;
+
 		let ref = FbApp.database().ref("Shelters/");
 
 		ref.on("value", function(snapshot) {
-		  let shelters = snapshot.val();
-		  let filtered = {};
+		  let shelters = searchShelters(snapshot.val(), name, gender, ageRange);
 
-		  for (const key in shelters) {
-		  	if (shelters.hasOwnProperty(key)) {
-		  		let shelter = shelters[key];
-		  		let restrictions = shelter.Restrictions;
-		  		let maleRegex = /\bmale\b|\bmen\b/gi;
-		  		let femaleRegex = /\bfemale\b|\bwomen\b/gi
-		  		if (gender === "male") {
-		  			if (restrictions.match(maleRegex)) {
-		  				filtered[key] = shelter;
-		  			} else if (!restrictions.match(femaleRegex)) {
-		  				filtered[key] = shelter;
-		  			}
-		  		} else if (gender === "female") {
-		  			if (restrictions.match(femaleRegex)) {
-		  				filtered[key] = shelter;
-		  			} else if (!restrictions.match(maleRegex)) {
-		  				filtered[key] = shelter;
-		  			}
-		  		} else {
-		  			filtered[key] = shelter;
-		  		}
-		  	}
-		  }
-
-		  res.render("shelters", { shelters: filtered });
+		  res.render("shelters", { shelters });
 		}, function (errorObject) {
 		  console.log("The read failed: " + errorObject.code);
 		  res.send(errorObject.code);
