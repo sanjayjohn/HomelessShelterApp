@@ -16,13 +16,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 require("./routes/authRoutes")(app);
+require("./routes/shelterRoutes")(app);
 app.get("/", function(req, res) {
-    if (!FbApp.auth().currentUser) {
+    let currentUser = FbApp.auth().currentUser;
+    if (!currentUser) {
         res.redirect("/login");
     }
-    res.send("LOGGED IN");
+    res.render("index", { currentUser })
 });
 
 app.listen(3000, function() {
-    console.log("Hello World");
+    console.log("Running on port 3000");
 });

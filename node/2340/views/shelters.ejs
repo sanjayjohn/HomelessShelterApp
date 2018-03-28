@@ -1,0 +1,15 @@
+<h1>Shelters</h1>
+
+<% for (key in shelters) { %>
+	<% if (shelters.hasOwnProperty(key)) { %>
+		<% let shelter = shelters[key]; %>
+		<div>
+			<h3><%= shelter.shelterName %></h3>
+			<p>Address: <%= shelter.address %> </p>
+			<p>Capacity: <%= shelter.capacity %> </p>
+			<p>Restrictions: <%= shelter.restrictions %> </p>
+			<p>Phone: <%= shelter.phone %> </p>
+			<p>Notes: <%= shelter.specialNotes %> </p>
+		</div>
+	<% } %>
+<% } %>

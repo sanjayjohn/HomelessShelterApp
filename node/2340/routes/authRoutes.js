@@ -19,7 +19,7 @@ module.exports = app => {
 	});
 
 	app.get("/login", (req, res) => {
-		res.render("index");
+		res.render("login");
 	});
 
 	app.post("/login", function(req, res) {
