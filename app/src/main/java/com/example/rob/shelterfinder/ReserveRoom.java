@@ -3,12 +3,10 @@ package com.example.rob.shelterfinder;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -34,14 +32,14 @@ public class ReserveRoom extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserve_room);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        roomsNeeded   = (EditText)findViewById(R.id.roomsNeeded);
-        roomsCancelled = (EditText)findViewById(R.id.roomsCancelled);
+        roomsNeeded   = findViewById(R.id.roomsNeeded);
+        roomsCancelled = findViewById(R.id.roomsCancelled);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +48,7 @@ public class ReserveRoom extends AppCompatActivity {
             }
         });
 
-        Button reserve = (Button) findViewById(R.id.reserveRoom);
+        Button reserve = findViewById(R.id.reserveRoom);
         reserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +56,7 @@ public class ReserveRoom extends AppCompatActivity {
             }
         });
 
-        Button cancel = (Button) findViewById(R.id.Cancel);
+        Button cancel = findViewById(R.id.Cancel);
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

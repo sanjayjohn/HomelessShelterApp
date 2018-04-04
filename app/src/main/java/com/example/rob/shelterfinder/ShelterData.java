@@ -1,6 +1,5 @@
 package com.example.rob.shelterfinder;
 
-import java.security.PublicKey;
 
 /**
  * Created by sanjayjohn on 2/27/18.

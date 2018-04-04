@@ -22,17 +22,15 @@ import java.util.ArrayList;
 public class ShelterDetail extends AppCompatActivity {
     private ArrayList<String> array;
     DatabaseReference mRef;
-    ListView listview2;
-    ArrayList<String> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shelter_detail);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button signAccount = (Button) findViewById(R.id.reserve);
+        Button signAccount = findViewById(R.id.reserve);
         signAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,7 +38,7 @@ public class ShelterDetail extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +49,7 @@ public class ShelterDetail extends AppCompatActivity {
 
         mRef = FirebaseDatabase.getInstance().getReference();
         array = new ArrayList<>();
-        final ListView listView2 = (ListView) findViewById(R.id.listView2);
+        final ListView listView2 = findViewById(R.id.listView2);
 
         mRef.child("Shelters").addValueEventListener(new ValueEventListener() {
             @Override
@@ -68,11 +66,9 @@ public class ShelterDetail extends AppCompatActivity {
                         array.add("Longitude:" +  "    " + value.getLongitude());
                         array.add("Gender:" + "    " +  value.getRestrictions());
                         Log.w("Item", ""+ value.getAddress());
-//                        Log.w("Item", ""+ AppActivity.positionList);
                     }
-//                    Log.w("Item", ""+ newValue);
                 }
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(),
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext(),
                         android.R.layout.simple_list_item_1, array);
 
                 listView2.setAdapter(adapter);

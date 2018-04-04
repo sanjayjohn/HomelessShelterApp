@@ -1,63 +1,26 @@
 package com.example.rob.shelterfinder;
 
-import android.content.DialogInterface;
 import java.util.List;
 import android.widget.AdapterView.OnItemSelectedListener;
 import java.util.ArrayList;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
-import android.text.TextUtils;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ListAdapter;
-import android.widget.SpinnerAdapter;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.ProviderQueryResult;
-import com.google.firebase.auth.UserProfileChangeRequest;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import java.util.ArrayList;
-import java.util.List;
-import android.app.Activity;
-import android.content.Context;
-import android.graphics.Color;
-import android.graphics.Typeface;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.view.Gravity;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.AdapterView.OnItemSelectedListener;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -66,7 +29,6 @@ public class RegisterActivity extends AppCompatActivity {
     EditText _Name;
     EditText _Email;
     EditText _Password;
-    private Spinner userType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         _Email = findViewById(R.id.RegisterEmail);
         _Password = findViewById(R.id.RegisterPassword);
 
-        Button registerAccount = (Button) findViewById(R.id.Regbutton);
+        Button registerAccount = findViewById(R.id.Regbutton);
         registerAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,15 +48,15 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
 // Spinner element
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner spinner = findViewById(R.id.spinner);
 
         // Spinner Drop down elements
-        List<String> accType = new ArrayList<String>();
+        List<String> accType = new ArrayList<>();
         accType.add("User");
         accType.add("Admin");
 
         // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, accType);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, accType);
 
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -116,7 +78,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        Button cancelButton = (Button) findViewById(R.id.cancelReg);
+        Button cancelButton = findViewById(R.id.cancelReg);
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,9 +95,6 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        //updateUI(currentUser);
     }
 
     private void makeAccount() {
@@ -148,7 +107,6 @@ public class RegisterActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Log.d(TAG, "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
                             finish();
                             Intent intent = new Intent(getApplication(), LoginActivity.class);
                             startActivity(intent);

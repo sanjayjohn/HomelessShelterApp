@@ -1,33 +1,16 @@
 package com.example.rob.shelterfinder;
 
-import android.*;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.Toast;
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.widget.Toast;
-
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -38,22 +21,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
 
 
@@ -84,7 +57,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
-    private static final String TAG = "MapActivity";
 
     private static final String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
     private static final String COURSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
@@ -92,7 +64,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private static final float DEFAULT_ZOOM = 4f;
     private Boolean mLocationPermissionsGranted = false;
     private GoogleMap mMap;
-    private FusedLocationProviderClient mFusedLocationProviderClient;
     DatabaseReference mRef;
     ArrayList<Marker> array = new ArrayList<>();
     ArrayList<Marker> array2 = new ArrayList<>();
@@ -124,7 +95,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 for (DataSnapshot child : children) {
                     ShelterData value = child.getValue(ShelterData.class);
                     allShelters.add(value);
-                    Log.w("Item", ""+ value.getCapacity());
                     double lat = Double.parseDouble(value.getLatitude());
                     double lon = Double.parseDouble(value.getLongitude());
                     LatLng coord = new LatLng(lat, lon);
@@ -308,7 +278,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private void getDeviceLocation(){
 
-        mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        FusedLocationProviderClient mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
         try{
             if(mLocationPermissionsGranted){
@@ -317,18 +287,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 location.addOnCompleteListener(new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull Task task) {
-                        if(task.isSuccessful()){
+                        if(task.isSuccessful()) {
                             Location currentLocation = (Location) task.getResult();
 
                             moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
                                     DEFAULT_ZOOM);
 
-                        }else{
                         }
                     }
                 });
             }
         }catch (SecurityException e){
+            System.out.print("Security Error");
         }
     }
 
