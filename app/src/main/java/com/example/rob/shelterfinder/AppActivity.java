@@ -4,14 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.app.SearchManager;
 import android.widget.SearchView;
@@ -28,25 +25,25 @@ import java.util.ArrayList;
 
 public class AppActivity extends AppCompatActivity {
     private ArrayList<String> array;
-    private ArrayList<String> menArray;
-    private ArrayList<String> womenArray;
-    private ArrayList<String> familyArray;
-    private ArrayList<String> childrenArray;
-    private ArrayList<String> youngAdultArray;
-    private ArrayList<String> anyoneArray;
-    private ArrayList<String> s0;
-    private ArrayList<String> s1;
-    private ArrayList<String> s2;
-    private ArrayList<String> s3;
-    private ArrayList<String> s4;
-    private ArrayList<String> s5;
-    private ArrayList<String> s6;
-    private ArrayList<String> s7;
-    private ArrayList<String> s8;
-    private ArrayList<String> s9;
-    private ArrayList<String> s10;
-    private ArrayList<String> s11;
-    private ArrayList<String> s12;
+    static ArrayList<String> menArray;
+    static ArrayList<String> womenArray;
+    static ArrayList<String> familyArray;
+    static ArrayList<String> childrenArray;
+    static ArrayList<String> youngAdultArray;
+    static ArrayList<String> anyoneArray;
+    static ArrayList<String> s0;
+    static ArrayList<String> s1;
+    static ArrayList<String> s2;
+    static ArrayList<String> s3;
+    static ArrayList<String> s4;
+    static ArrayList<String> s5;
+    static ArrayList<String> s6;
+    static ArrayList<String> s7;
+    static ArrayList<String> s8;
+    static ArrayList<String> s9;
+    static ArrayList<String> s10;
+    static ArrayList<String> s11;
+    static ArrayList<String> s12;
 
     DatabaseReference mRef;
     ListView listview1;
@@ -68,6 +65,13 @@ public class AppActivity extends AppCompatActivity {
             }
         });
 
+        Button goMap = (Button) findViewById(R.id.map);
+        signAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                map(view);
+            }
+        });
         mRef = FirebaseDatabase.getInstance().getReference();
         array = new ArrayList<>();
         menArray = new ArrayList<>();
@@ -327,6 +331,10 @@ public class AppActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void map(View view) {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
 
 
 }
