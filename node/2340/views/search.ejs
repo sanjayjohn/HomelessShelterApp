@@ -1,24 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>index</title>
+	<meta name="description" content="index">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+	 crossorigin="anonymous">
+
+</head>
+
+<div class="container">
+	<div class="text-center">
 <h1>Search Shelters</h1>
 
-<form action="/shelters/search" method="POST">
-	<label>Search by name</label><br>
-	<input type="text" name="name">
-	<button type="submit">Search</button>
-</form>
+<body>
+	<form action="/shelters/search" method="POST">
 
-<form action="/shelters/search" method="POST">
-	<label>Search by gender</label><br>
-	<input type="radio" name="gender" value="male"> Male<br>
-	<input type="radio" name="gender" value="female"> Female<br>
-	<input type="radio" name="gender" value="unspecified"> Unspecified<br>
-	<button type="submit">Search</button>
-</form>
+		<div class="row justify-content-center">
+			<div class="col-lg-6">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="name">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="submit">Search</button>
+					</span>
+				</div>
+				<!-- /input-group -->
+			</div>
+			<!-- /.col-lg-6 -->
+		</div>
+		<!-- /.row -->
+	</form>
+	
+	<form action="/shelters/search" method="POST">
+		<label>Search by gender</label>
+		<br>
+		<input type="radio" name="gender" value="male"> Male
+		<br>
+		<input type="radio" name="gender" value="female"> Female
+		<br>
+		<input type="radio" name="gender" value="unspecified"> Unspecified
+		<br>
+		<button type="submit" class="btn btn-outline-secondary">Search</button>
+	</form>
+	
+	<form action="/shelters/search" method="POST">
+		<label>Search by age range</label>
+		<br>
+		<input type="radio" name="ageRange" value="families"> Families
+		<br>
+		<input type="radio" name="ageRange" value="children"> Children
+		<br>
+		<input type="radio" name="ageRange" value="youngAdults"> Young Adults
+		<br>
+		<input type="radio" name="ageRange" value="anyone"> Anyone
+		<br>
+		<button type="submit" class="btn btn-outline-secondary">Search</button>
+	</form>
+</body>
 
-<form action="/shelters/search" method="POST">
-	<label>Search by age range</label><br>
-	<input type="radio" name="ageRange" value="families"> Families<br>
-	<input type="radio" name="ageRange" value="children"> Children<br>
-	<input type="radio" name="ageRange" value="youngAdults"> Young Adults<br>
-	<input type="radio" name="ageRange" value="anyone"> Anyone<br>
-	<button type="submit">Search</button>
-</form>
+</div>
+</div>
+
+</html>
+
+
+
+
+
+

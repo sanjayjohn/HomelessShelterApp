@@ -1,15 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+
+<div class="container">
+	<div class="text-center">
+<head>
+	<meta charset="utf-8">
+
+	<title>index</title>
+	<meta name="description" content="index">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+	 crossorigin="anonymous">
+
+</head>
 <h1>Shelters</h1>
 
-<% for (key in shelters) { %>
-	<% if (shelters.hasOwnProperty(key)) { %>
-		<% let shelter = shelters[key]; %>
-		<div>
-			<h3><%= shelter.shelterName %></h3>
-			<p>Address: <%= shelter.Address %> </p>
-			<p>Capacity: <%= shelter.Capacity %> </p>
-			<p>Restrictions: <%= shelter.Restrictions %> </p>
-			<p>Phone: <%= shelter.phone %> </p>
-			<p>Notes: <%= shelter.specialNotes %> </p>
-		</div>
-	<% } %>
-<% } %>
+<body>
+	<% for (key in shelters) { %>
+		<% if (shelters.hasOwnProperty(key)) { %>
+			<% let shelter = shelters[key]; %>
+				<div>
+					<h3>
+						<%= shelter.shelterName %>
+					</h3>
+					<p>Address:
+						<%= shelter.Address %>
+					</p>
+					<p>Capacity:
+						<%= shelter.Capacity %>
+					</p>
+					<p>Restrictions:
+						<%= shelter.Restrictions %>
+					</p>
+					<p>Phone:
+						<%= shelter.phone %>
+					</p>
+					<p>Notes:
+						<%= shelter.specialNotes %>
+					</p>
+				</div>
+				<% } %>
+					<% } %>
+</body>
+
+</div>
+</div>
+
+</html>
+
+
+
